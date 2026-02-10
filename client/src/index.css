@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Romantic Soft Palette - Light Mode */
+  --background: 340 33% 98%;
+  --foreground: 340 20% 25%;
+  
+  --primary: 340 60% 65%; /* Soft Pink/Rose */
+  --primary-foreground: 340 10% 98%;
+  
+  --secondary: 260 40% 96%; /* Lavender Tint */
+  --secondary-foreground: 260 20% 30%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 340 20% 25%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 340 20% 25%;
+  
+  --muted: 340 20% 96%;
+  --muted-foreground: 340 10% 55%;
+  
+  --accent: 340 60% 94%;
+  --accent-foreground: 340 60% 45%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 340 20% 92%;
+  --input: 340 20% 92%;
+  --ring: 340 60% 65%;
+  
+  --radius: 1rem;
+  
+  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+.dark {
+  /* Romantic Deep Palette - Dark Mode */
+  --background: 340 20% 10%;
+  --foreground: 340 10% 90%;
+  
+  --primary: 340 60% 65%;
+  --primary-foreground: 340 10% 98%;
+  
+  --secondary: 260 20% 15%;
+  --secondary-foreground: 260 10% 90%;
+  
+  --card: 340 20% 12%;
+  --card-foreground: 340 10% 90%;
+  
+  --popover: 340 20% 12%;
+  --popover-foreground: 340 10% 90%;
+  
+  --muted: 340 20% 15%;
+  --muted-foreground: 340 10% 60%;
+  
+  --accent: 340 40% 20%;
+  --accent-foreground: 340 60% 80%;
+  
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 340 20% 20%;
+  --input: 340 20% 20%;
+  --ring: 340 60% 65%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom Utilities */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10 hover:-translate-y-1;
+}
+
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-lg dark:bg-black/40 dark:border-white/10;
+}

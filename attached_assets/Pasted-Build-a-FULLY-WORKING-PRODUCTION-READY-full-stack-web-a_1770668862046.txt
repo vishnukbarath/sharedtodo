@@ -1,0 +1,161 @@
+Build a FULLY WORKING, PRODUCTION-READY full-stack web application called "CoupleTodo".
+
+This is NOT a demo. Do NOT simplify. Do NOT skip backend, database, or authentication.
+
+====================================
+TECH STACK (MANDATORY)
+====================================
+- Framework: Next.js (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Backend: Next.js API routes
+- ORM: Prisma
+- Database: PostgreSQL (Neon DB)
+- Auth: NextAuth.js
+- Deployment-ready for Replit
+- Environment variables loaded from .env
+
+====================================
+ENVIRONMENT VARIABLES (ALREADY PROVIDED)
+====================================
+Use DATABASE_URL from .env for Prisma.
+Use NEXTAUTH_URL and NEXTAUTH_SECRET.
+Use Google OAuth credentials from .env.
+Do NOT hardcode secrets.
+
+====================================
+CORE APP CONCEPT
+====================================
+A private shared Todo application designed for couples.
+
+Exactly TWO users share ONE workspace.
+No public access.
+No third user allowed.
+
+Theme: 
+- Romantic
+- Soft pastel colors
+- Love-focused UI
+- Clean, modern, emotionally warm design
+- Heart accents, subtle gradients
+- NOT childish, NOT cartoonish
+
+====================================
+AUTHENTICATION (MANDATORY)
+====================================
+- Email + password authentication
+- Google OAuth login
+- Secure session handling using NextAuth
+- Protected routes
+- Redirect unauthenticated users to login
+- Seed two demo users using SEED_HIM_PASSWORD and SEED_HER_PASSWORD
+
+====================================
+DATABASE DESIGN (MANDATORY)
+====================================
+Use Prisma and create proper relational models for:
+
+- User
+- CoupleWorkspace
+- CoupleMember
+- Todo
+- Comment
+- ActivityLog
+
+Requirements:
+- Foreign keys
+- Indexes
+- Cascading deletes
+- Proper relations
+- Migrations included
+
+====================================
+COUPLE WORKSPACE LOGIC
+====================================
+- User can create a couple workspace
+- Invite partner via invite code
+- Partner can accept invite
+- Workspace limited to exactly two users
+- Either user can create and manage todos
+- Ownership logic enforced
+
+====================================
+TODO FUNCTIONALITY
+====================================
+Each Todo must support:
+- Title
+- Description
+- Status (pending / completed)
+- Priority (low / medium / high)
+- Due date
+- Assigned to (him / her / both)
+- Created by
+- Timestamps
+
+Features:
+- Create todo
+- Edit todo
+- Delete todo
+- Mark complete
+- Real-time UI refresh (client-side)
+- Filter and sort todos
+- Separate completed section
+
+====================================
+COMMENTS & ACTIVITY
+====================================
+- Each todo supports comments
+- Show who commented
+- Activity log records:
+  - Todo created
+  - Todo completed
+  - Todo edited
+  - Partner joined
+
+====================================
+UI / UX REQUIREMENTS
+====================================
+- Love-themed dashboard
+- Shared couple greeting
+- Responsive design (mobile + desktop)
+- Soft animations
+- Dark & light mode
+- Empty state illustrations
+- Loading & error states
+
+====================================
+CODE QUALITY (MANDATORY)
+====================================
+- Clean folder structure
+- Reusable components
+- Type-safe Prisma queries
+- API route validation
+- Error handling
+- Comments where necessary
+
+====================================
+DELIVERABLES
+====================================
+- Fully working app
+- Prisma schema
+- Database migration
+- Seed script
+- .env usage
+- README with:
+  - Setup steps
+  - Prisma commands
+  - How to run locally
+  - How to deploy on Replit
+
+====================================
+IMPORTANT RULES
+====================================
+- Do NOT mock the database
+- Do NOT fake auth
+- Do NOT skip Prisma
+- Do NOT simplify logic
+- Fix all runtime errors
+- Ensure the app actually runs
+
+If anything breaks, automatically fix it.
+If a decision is unclear, choose the most production-safe option.
